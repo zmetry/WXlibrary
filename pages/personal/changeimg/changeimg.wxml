@@ -1,0 +1,52 @@
+<!--pages/personal/changeimg/changeimg.wxml-->
+
+<navigator bindtap="fileUploadTap">
+<view class="hr"></view>
+<view class='item'>
+  <view class="title">头像</view>
+  
+  <view class="detail2"> 
+    <view class="uim">
+    <image class="userimage" wx:if="{{userid}}" 
+          src="{{images}}"> </image>
+    </view>  
+    <text> ></text>
+  </view>
+</view>
+</navigator>
+<view class="line"></view>
+
+<navigator url="channame/channame">
+<view class="hr"></view>
+<view class='item'>
+  <view class="title">昵称</view>
+  <view class="detail2"> 
+    <text class="userimage" wx:if="{{userid}}">{{userid}} </text>
+    <text>></text>
+  </view>
+</view>
+</navigator>
+<view class="line"></view>
+
+<navigator url="changemail/changemail">
+<view class="hr"></view>
+<view class='item'>
+  <view class="title">邮箱</view>
+  <view class="detail2"> 
+    <text class="userimage" wx:if="{{userid}}">{{mail}} </text>
+    <text>></text>
+  </view>
+</view>
+</navigator>
+<view class="line"></view>
+
+<navigator url="changepwd/changepwd">
+<view class="hr"></view>
+<view class='item'>
+  <view class="title">修改密码</view>
+  <view class="detail2"> 
+    <text>></text>
+  </view>
+</view>
+</navigator>
+

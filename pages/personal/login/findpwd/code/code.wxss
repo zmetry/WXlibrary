@@ -1,0 +1,48 @@
+.form-line {
+  border: 1px solid #e3e3e3;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 20rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.input-text {
+  display: inline-block;
+  margin-left: 10%;
+  font-size: 26rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  width: 55%;
+}
+
+.yanzen {
+  display: inline-block;
+  font-size: 24rpx;
+  vertical-align: top;
+}
+
+.yanzen-row {
+  display: inline-block;
+  font-size: 24rpx;
+  vertical-align: top;
+}
+
+.time {
+  font-size: 26rpx;
+  color: #3DA15B;
+  display: inline-block;
+  
+}
+
+.smiao{
+  display: inline-block;
+}
+
+.sub-btn {
+  width: 60%;
+  margin-top: 20rpx;
+  background-color: beige;
+  color: green;
+  border-radius: 98rpx; 
+}

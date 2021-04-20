@@ -1,0 +1,42 @@
+<!--pages/personal/changeimg/changepwd/changepwd.wxml-->
+
+<view class='container'>
+  <form>
+    <view class='top'>
+      <view class='one_list'>
+        <view class='change'>
+          <view class=''>旧密码：</view>
+          <view>
+           <input placeholder="请输入旧密码" maxlength='20'
+           bindinput="inputOldpwd" password="true">
+          </input>
+          </view>
+          <text class="old" style="display:{{old}}">×</text>
+        </view>
+      </view>
+      <view class='x_line'></view>
+      <view class='one_list'>
+        <view class='change'>
+          <view class=''>新密码：</view>
+          <view>
+            <input placeholder="请输入新密码" maxlength='20'
+            bindinput="inputNewpwd1" password="true"></input>
+          </view>
+        </view>
+        <text class="old" style="display:{{new1}}">×</text>
+      </view>
+      <view class='x_line'></view>
+      <view class='one_list'>
+        <view class='change'>
+          <view class=''>确认密码：</view>
+          <view>
+            <input placeholder="请再次输入新密码" maxlength='20'
+            bindinput="inputNewpwd2" password="true"></input>
+          </view>
+        </view>
+        <text class="old" style="display:{{new2}}">×</text>
+      </view>
+    </view>
+    <view class='btn' bindtap="submit">确定</view>
+  </form>
+</view>

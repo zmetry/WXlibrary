@@ -1,0 +1,13 @@
+<!--pages/learning/study/study.wxml-->
+<view class="msg">
+  <text class="seatTx">您正在学习中</text>
+  <view>
+    <text class="seatTx">您目前已学习{{btHour}}时</text>
+  <text class="seatTx">{{btMin}}分</text>
+  </view>
+</view>
+
+<button class='btn1' bindtap="leave">
+    <image class='btnImg' src="static/exit.png"></image>
+    <view>签退</view>
+ </button>

@@ -1,0 +1,33 @@
+.msg{
+  display:block;
+  justify-content:center;
+  text-align: center;
+}
+
+.seatTx{
+  margin-top: 20px;
+}
+
+
+.btn1 {
+  width: 40%;
+  margin-top: 20rpx;
+  background-color: burlywood;
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnImg {
+  margin-right: 8rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.btn1::after {
+  border-radius: 98rpx;
+  border: 0; 
+}

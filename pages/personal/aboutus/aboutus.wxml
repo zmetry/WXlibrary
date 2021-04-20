@@ -1,0 +1,18 @@
+<!--pages/personal/aboutus/aboutus.wxml-->
+
+<view class="headico">
+  <view class="imagesize">
+    <image class="in-image" src="../static/images/lib.png"></image>
+  </view>
+</view>
+
+<view class="name">
+  简易图书馆管理系统
+</view>
+
+<block class="block">
+  <text>\n</text><text>\n</text><text>\n</text><text>\n</text><text>\n</text><text>\n</text><text>\n</text><text>\n</text><text>\n</text><text>\n</text><text>\n</text><text>\n</text>
+  <text>\n</text><text>\n</text><text>\n</text><text>\n</text><text>\n</text>
+</block>
+
+<view class="tailtext">无版权产品</view>
