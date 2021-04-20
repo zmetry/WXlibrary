@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wx.demo.mapper.MailMapper">
+
+    <select id="getMsgByName" parameterType="java.lang.String" resultType="com.wx.demo.mybatis.entity.Mail">
+        select * from library.usermail where name = #{name};
+    </select>
+
+    <select id="getMsgByMail" parameterType="java.lang.String" resultType="com.wx.demo.mybatis.entity.Mail">
+        select * from library.usermail where mail = #{mail};
+    </select>
+
+    <select id="getAllMsg" resultType="com.wx.demo.mybatis.entity.Mail">
+        select * from library.usermail;
+    </select>
+
+    <update id="ChangeMail" parameterType="com.wx.demo.mybatis.entity.Mail">
+        update library.usermail set mail = #{mail} where id = #{id};
+    </update>
+
+    <update id="ChangeName" parameterType="com.wx.demo.mybatis.entity.Mail">
+        update library.usermail set name = #{name} where id = #{id};
+    </update>
+    
+    <insert id="InsertMail" parameterType="com.wx.demo.mybatis.entity.Mail">
+        insert into library.usermail (name,mail)
+        values (#{name},#{mail});
+    </insert>
+
+</mapper>

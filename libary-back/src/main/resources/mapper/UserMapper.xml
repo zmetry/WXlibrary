@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wx.demo.mapper.UserMapper">
+    <select id="getUserList" resultType="com.wx.demo.mybatis.entity.User">
+        select * from library.user;
+    </select>
+    <select id="getUserById" resultType="com.wx.demo.mybatis.entity.User" parameterType="java.lang.Integer">
+        select * from library.user where id = #{id};
+    </select>
+    <!--对象中的属性可以直接取出来-->
+    <insert id="addUser" parameterType="com.wx.demo.mybatis.entity.User">
+        insert into library.user (name,password) values (#{name},#{password});
+    </insert>
+
+    <update id="updateUser" parameterType="com.wx.demo.mybatis.entity.User">
+        update library.user set name=#{name},password=#{password} where id=#{id};
+    </update>
+
+    <select id="getUserByName" parameterType="java.lang.String" resultType="com.wx.demo.mybatis.entity.User">
+        select * from library.user where name = #{name};
+    </select>
+
+    <delete id="deleteUser" parameterType="java.lang.Integer">
+        delete * from library.user where name = #{name};
+    </delete>
+
+    <select id="logIn" parameterType="java.lang.String" resultType="java.lang.Integer">
+        select * from library.user where name=#{name} and password=#{password};
+    </select>
+
+
+</mapper>

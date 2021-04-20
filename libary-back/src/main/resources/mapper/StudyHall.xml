@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wx.demo.mapper.StuHallMapper">
+
+    <select id="getAllMessage" resultType="com.wx.demo.mybatis.entity.StudyHall">
+        select * from library.studyhall;
+    </select>
+
+    <select id="getMessage" parameterType="java.lang.String" resultType="com.wx.demo.mybatis.entity.StudyHall">
+        select * from library.studyhall where name = #{name};
+    </select>
+
+    <update id="addNowNum" parameterType="java.lang.String">
+        update library.studyhall set NowNum = NowNum + 1 where name = #{name};
+    </update>
+
+    <update id="reduceNowNum" parameterType="java.lang.String">
+        update library.studyhall set NowNum = NowNum - 1 where name = #{name};
+    </update>
+
+</mapper>

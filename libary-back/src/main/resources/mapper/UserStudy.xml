@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wx.demo.mapper.UserStudyMapper">
+
+    <select id="getMsgByName" parameterType="java.lang.String" resultType="com.wx.demo.mybatis.entity.UserStudy">
+        select * from library.userstudy where name = #{name};
+    </select>
+
+    <delete id="DeleteByName" parameterType="java.lang.String">
+        delete from library.userstudy where name =#{name};
+    </delete>
+
+    <insert id="InsertMsg" parameterType="com.wx.demo.mybatis.entity.UserStudy">
+        insert into library.userstudy (name,cols,ros,BfDate,LearnId)
+        values (#{name},#{cols},#{ros},#{BfDate},#{LearnId});
+    </insert>
+
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wx.demo.mapper.SquareMsgMapper">
+
+    <select id="getAllMsg" resultType="com.wx.demo.mybatis.entity.SquareMsg">
+        select * from library.squaremsg;
+    </select>
+
+    <insert id="addMsg" parameterType="com.wx.demo.mybatis.entity.SquareMsg">
+        insert into library.squaremsg (name,imgurl,text,date ) values (#{name},#{imgurl},#{text},#{date});
+    </insert>
+
+    <update id="changeName" parameterType="com.wx.demo.mybatis.entity.SquareMsg">
+        update library.squaremsg set name = #{name} where id = #{id};
+    </update>
+
+    <delete id="deleteMsg" parameterType="com.wx.demo.mybatis.entity.SquareMsg">
+        delete from library.squaremsg where name = #{name} and text = #{text};
+    </delete>
+
+</mapper>

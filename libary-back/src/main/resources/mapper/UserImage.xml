@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wx.demo.mapper.UserImageMapper">
+
+    <insert id="addUserImage" parameterType="com.wx.demo.mybatis.entity.UserImage">
+        insert into library.usertest (name,image) values (#{name},#{image});
+    </insert>
+
+    <update id="updateUserImage" parameterType="com.wx.demo.mybatis.entity.UserImage">
+        update library.usertest set image = #{image} where name = #{name};
+    </update>
+
+    <select id="getUserImage" parameterType="java.lang.String" resultType="com.wx.demo.mybatis.entity.UserImage">
+        select * from library.usertest where name = #{name};
+    </select>
+
+</mapper>

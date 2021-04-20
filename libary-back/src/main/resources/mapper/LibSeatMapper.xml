@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wx.demo.mapper.LibSeatMapper">
+
+    <select id="getall" resultType="com.wx.demo.mybatis.entity.LibSeat">
+        select * from library.libseat;
+    </select>
+
+    <update id="SetSeat">
+        update library.libseat set exist = #{exist} where cols = #{cols} and ros = #{ros};
+    </update>
+
+    <select id="getSeatById" parameterType="java.lang.Integer">
+        select * from library.libseat where id = #{id};
+    </select>
+
+    <update id="reserveSeat" parameterType="java.lang.Integer">
+        update library.libseat set exist = 1 where id = #{id};
+    </update>
+
+    <update id="UnreserveSeat" parameterType="java.lang.Integer">
+        update library.libseat set exist = 0 where id = #{id};
+    </update>
+
+</mapper>
