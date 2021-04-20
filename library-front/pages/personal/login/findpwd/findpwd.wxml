@@ -1,0 +1,22 @@
+
+<view class='content'>
+  <view>
+    <view>
+      <text>\n</text><text>\n</text>
+    </view>
+    <label>找回密码:</label>
+    <view class="line">
+      <text>\n</text>
+    </view>
+    <view class="sections">
+      <input name="no" type='number' placeholder-class='small'
+      bindinput="nameInput" placeholder='请输入姓名' />
+    </view>
+    <view>
+      <text>\n</text>
+    </view>
+      <button type='primary' placeholder-class='small'
+      class="btn" bindtap="submit" >找回密码</button>
+
+  </view>
+</view>

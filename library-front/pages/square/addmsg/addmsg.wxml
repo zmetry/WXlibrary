@@ -1,0 +1,10 @@
+<!--pages/square/addmsg/addmsg.wxml-->
+
+<view class='page'>
+  <textarea class='text' bindinput="inputtext" placeholder="分享动态" auto-height/>
+  
+  <image class="upimg" src="{{imgsrc}}" bindtap="upimg"></image>
+
+</view>
+
+<button class="sub-btn" bindtap="submit">提交</button>

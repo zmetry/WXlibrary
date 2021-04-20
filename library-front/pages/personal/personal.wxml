@@ -1,0 +1,67 @@
+<!--pages/personal/personal.wxml-->
+<view class="bg">
+  <view class="head">
+    <view class="headIcon">
+    </view>
+    <view class="login">
+      {{userid}}
+    </view>
+  </view>
+
+  
+  <view class="uim">
+    <navigator url="changeimg/changeimg">
+  <image class="userimage" wx:if="{{userid}}" 
+  src="{{images}}"></image>
+</navigator>
+  </view>
+
+
+  <button class="button"  style="display:block;margin:0 auto"
+  wx:if="{{!userid}}" bindtap="loginpage">登录 </button>
+</view>
+
+<view class="hr"></view>
+<navigator url="leared/leared">
+  <view class='item'>
+  <view class="title">学习记录</view>
+  <view class="detail2">
+    <text> ></text>
+  </view>
+</view>
+</navigator>
+<view class="line"></view>
+
+<navigator url="feedback/feedback">
+  <view class="item">
+  <view class="title">意见反馈</view>
+  <view class="detail2">
+    <text> ></text>
+  </view>
+</view>
+</navigator>
+
+<view class="line"></view>
+
+<navigator url="aboutus/aboutus">
+  <view class="item">
+  <view class="title">关于我们</view>
+  <view class="detail2">
+    <text> ></text>
+  </view>
+</view>
+</navigator>
+
+<view class="line"></view>
+
+<navigator url="set/set">
+  <view class="item">
+  <view class="title">设置</view>
+  <view class="detail2">
+    <text> ></text>
+  </view>
+</view>
+</navigator>
+
+<view class="hr"></view>
+

@@ -1,0 +1,40 @@
+
+<view>
+  <text>目前还剩{{free}}个空位</text>
+</view>
+
+<view wx:for="{{seats}}" wx:for-item="item" wx:key="index">
+  <!--添加item的data值-->
+  <view class="left-view" >
+    <!--有人时的图片-->
+    <image wx:if="{{item.exist == 1}}" class="seat-icon"
+    data-cols="{{item.col}}"data-ros="{{item.row}}" 
+    data-exist="{{item.exist}}" style="display:{{item.visiB}}"
+    src="static/hasperson.png" bindtap="check"></image>
+    <!--无人时的图片-->
+
+  <image wx:if="{{item.exist == 0}}" class="seat-icon"
+  data-col="{{item.col}}"data-row="{{item.row}}" 
+    data-exist="{{item.exist}}" data-id="{{item.id}}"
+    style="display:{{item.visiB}}"
+  src="static/noperson.png" bindtap="check"></image>
+
+  <!--点击时的照片-->
+  <image style="display:{{item.visiC}}" class="seat-icon"
+  data-col="{{item.col}}"data-row="{{item.row}}" 
+    data-exist="{{item.exist}}" data-id="{{item.id}}"
+   src="static/checkedseat.png" bindtap="check">
+  </image>
+
+  </view>
+</view>
+
+<view class="seatmsg">
+  <text class="seatTx" wx:if="{{id != ''}}">您选择的座位</text>
+  <view wx:if="{{id != ''}}">
+    第<text class="red-font">{{col}}</text> <text>行，</text> 
+    第<text class="red-font">{{row}}</text> <text>列</text>
+  </view>
+</view>
+
+<button  wx:if="{{id != ''}}" class="bt_connect" hover-class="hover-class-1" bindtap="connect">选定</button>

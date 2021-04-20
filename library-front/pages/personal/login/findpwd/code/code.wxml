@@ -1,0 +1,22 @@
+<view class='form-line'>
+
+<input class='input-text' placeholder='请输入您的验证码' bindinput='verify'></input>
+<!-- block 表示判断成立才显示的代码 -->
+<block wx:if='{{yanStatus == false}}'>
+  <view class='yanzen' bindtap='yanZheng'>获取短信验证码</view>
+</block>
+<block wx:else>
+  <view class='yanzen-row'>
+    <view class='time'>{{minute}}</view>
+    <view class="smiao">s后重新获取</view>
+  </view>
+</block>
+
+</view>
+
+<view>
+<text>\n</text><text>\n</text>
+</view>
+
+<button class="sub-btn" bindtap="submit">提交</button>
+

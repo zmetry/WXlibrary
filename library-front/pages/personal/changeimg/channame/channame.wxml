@@ -1,0 +1,15 @@
+<view class="submit-bk">
+  <button class="submit-btn" bindtap="changeName">提交</button>
+</view>
+
+<view class="hr"></view>
+<view class='item'>
+  <input class="title" placeholder="{{userid}}" 
+  bindinput="usernameInput"></input>
+  <view class="detail2"> 
+    <text>></text>
+  </view>
+</view>
+<text class="smallfont">好名字可以让别人记住你</text>
+
+<button></button>

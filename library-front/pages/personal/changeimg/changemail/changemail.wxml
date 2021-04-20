@@ -1,0 +1,14 @@
+<view class="submit-bk">
+  <button class="submit-btn" bindtap="changeName">提交</button>
+</view>
+
+<view class="hr"></view>
+<view class='item'>
+  <input class="title" placeholder="{{mail}}" 
+  bindinput="usernameInput"></input>
+  <view class="detail2"> 
+    <text>></text>
+  </view>
+</view>
+
+<button></button>
